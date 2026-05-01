@@ -1,0 +1,418 @@
+/* =========================================
+   GLOBAL RESET
+========================================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#ffffff;
+color:#212121;
+line-height:1.6;
+overflow-x:hidden;
+}
+
+/* Container */
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar{
+position:sticky;
+top:0;
+background:white;
+z-index:1000;
+padding:15px 0;
+transition:0.3s;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+
+.nav-content{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+color:#FFC107;
+font-weight:700;
+letter-spacing:.5px;
+}
+
+/* Navigation */
+
+.nav-links{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:#212121;
+font-weight:500;
+transition:.3s;
+}
+
+.nav-links a:hover{
+color:#FFC107;
+}
+
+/* CTA */
+
+.cta-btn{
+background:#FFC107;
+border:none;
+padding:10px 20px;
+border-radius:10px;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+}
+
+.cta-btn:hover{
+transform:translateY(-2px);
+box-shadow:0 6px 15px rgba(0,0,0,.15);
+}
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.hero{
+padding:90px 0;
+background:
+linear-gradient(135deg,#ffffff,#f7f7f7);
+}
+
+.hero-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
+
+.hero-title{
+font-size:52px;
+font-weight:700;
+animation:fadeUp 1s ease forwards;
+}
+
+.hero-sub{
+margin:20px 0;
+color:#555;
+font-size:18px;
+}
+
+/* Coverage checker */
+
+.coverage-box{
+display:flex;
+gap:10px;
+margin-top:15px;
+}
+
+.coverage-box input{
+flex:1;
+padding:15px;
+border-radius:10px;
+border:1px solid #ddd;
+font-size:16px;
+outline:none;
+}
+
+.coverage-box button{
+background:#FFC107;
+border:none;
+padding:15px 20px;
+border-radius:10px;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+}
+
+.coverage-box button:hover{
+transform:translateY(-2px);
+}
+
+/* Glass Card */
+
+.glass-card{
+background:rgba(255,255,255,0.65);
+backdrop-filter:blur(12px);
+border-radius:12px;
+padding:40px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+animation:float 4s ease-in-out infinite;
+}
+
+.glass-card i{
+font-size:45px;
+color:#FFC107;
+margin-bottom:15px;
+}
+
+/* =========================================
+   FEATURES
+========================================= */
+
+.features{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+padding:80px 0;
+text-align:center;
+}
+
+.feature{
+padding:30px;
+border-radius:12px;
+transition:.3s;
+}
+
+.feature i{
+font-size:34px;
+color:#FFC107;
+margin-bottom:15px;
+}
+
+.feature:hover{
+transform:translateY(-8px);
+box-shadow:0 12px 25px rgba(0,0,0,0.08);
+}
+
+/* =========================================
+   PRICING
+========================================= */
+
+.pricing{
+background:#212121;
+padding:90px 0;
+color:white;
+}
+
+.pricing-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+}
+
+.price-card{
+background:white;
+color:#212121;
+padding:45px 35px;
+border-radius:12px;
+text-align:center;
+transition:.35s;
+position:relative;
+}
+
+.price-card:hover{
+transform:translateY(-10px);
+box-shadow:0 15px 35px rgba(0,0,0,.25);
+}
+
+.price-card h2{
+margin:10px 0;
+}
+
+.price{
+font-size:30px;
+font-weight:700;
+color:#FFC107;
+margin:15px 0;
+}
+
+.price-card ul{
+list-style:none;
+margin:25px 0;
+}
+
+.price-card li{
+margin:10px 0;
+}
+
+.price-card button{
+background:#FFC107;
+border:none;
+padding:12px 22px;
+border-radius:10px;
+cursor:pointer;
+font-weight:600;
+transition:.3s;
+}
+
+.price-card button:hover{
+transform:translateY(-2px);
+}
+
+/* Highlight plan */
+
+.highlight{
+transform:scale(1.06);
+box-shadow:0 10px 35px rgba(0,0,0,.3);
+}
+
+.badge{
+position:absolute;
+top:-12px;
+left:50%;
+transform:translateX(-50%);
+background:#FFC107;
+padding:6px 14px;
+border-radius:8px;
+font-size:12px;
+font-weight:600;
+}
+
+/* Selected plan (JS adds class) */
+
+.price-card.selected{
+outline:3px solid #FFC107;
+transform:scale(1.07);
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer{
+background:#111;
+color:white;
+padding:60px 0;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:40px;
+}
+
+.footer h4{
+margin-bottom:10px;
+}
+
+.footer input{
+width:100%;
+padding:12px;
+border-radius:8px;
+border:none;
+margin-top:10px;
+}
+
+.footer button{
+margin-top:10px;
+padding:10px 18px;
+background:#FFC107;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+.socials i{
+font-size:20px;
+margin-right:12px;
+cursor:pointer;
+transition:.3s;
+}
+
+.socials i:hover{
+color:#FFC107;
+}
+
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+.menu-toggle{
+display:none;
+background:none;
+border:none;
+font-size:24px;
+cursor:pointer;
+}
+
+.nav-links.show{
+display:flex;
+flex-direction:column;
+position:absolute;
+top:70px;
+left:0;
+width:100%;
+background:white;
+padding:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-15px);}
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media(max-width:1000px){
+
+.hero-grid{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.hero-title{
+font-size:38px;
+}
+
+.features{
+grid-template-columns:1fr;
+}
+
+.pricing-grid{
+grid-template-columns:1fr;
+}
+
+.footer-grid{
+grid-template-columns:1fr;
+}
+
+.nav-links{
+display:none;
+}
+
+.menu-toggle{
+display:block;
+}
+
+}
