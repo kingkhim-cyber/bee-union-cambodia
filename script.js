@@ -1,109 +1,71 @@
-/* ================= MOBILE NAV TOGGLE ================= */
+/* COVERAGE CHECK */
 
-const menuBtn = document.createElement("button");
-menuBtn.innerHTML = "☰";
-menuBtn.classList.add("menu-toggle");
+document.getElementById("checkCoverage")
+.onclick=()=>{
+const input=document.querySelector(".coverage-box input").value;
 
-document.querySelector(".nav-content").prepend(menuBtn);
+if(!input) return alert("Enter address");
 
-menuBtn.addEventListener("click", () => {
-  document.querySelector(".nav-links").classList.toggle("show");
-});
+alert("✅ Fiber available near "+input);
+};
 
+/* SPEED TEST */
 
-/* ================= SMOOTH SCROLL ================= */
+const start=document.getElementById("startSpeed");
+const number=document.getElementById("speedNumber");
 
-document.querySelectorAll("a[href^='#']").forEach(link=>{
-  link.addEventListener("click",e=>{
-    e.preventDefault();
+start.onclick=()=>{
+let speed=0;
 
-    const target = document.querySelector(link.getAttribute("href"));
-    if(target){
-      target.scrollIntoView({
-        behavior:"smooth"
-      });
-    }
-  });
-});
+const test=setInterval(()=>{
+speed+=Math.random()*20;
+number.innerText=Math.floor(speed);
 
-
-/* ================= COVERAGE CHECKER ================= */
-
-const coverageBtn = document.querySelector(".coverage-box button");
-
-if(coverageBtn){
-coverageBtn.addEventListener("click",()=>{
-
-  const input =
-    document.querySelector(".coverage-box input").value;
-
-  if(input.trim()===""){
-    alert("Please enter your address.");
-    return;
-  }
-
-  coverageBtn.innerText="Checking...";
-  coverageBtn.disabled=true;
-
-  setTimeout(()=>{
-    alert(`✅ Fiber available near "${input}"`);
-    coverageBtn.innerText="Check Coverage";
-    coverageBtn.disabled=false;
-  },1500);
-});
+if(speed>=300){
+clearInterval(test);
+number.innerText="300";
 }
+},120);
+};
 
+/* PAY BILL MODAL */
 
-/* ================= PRICING SELECTION ================= */
+const modal=document.getElementById("billModal");
+document.getElementById("payBill").onclick=
+()=>modal.style.display="flex";
 
-document.querySelectorAll(".price-card button")
-.forEach(btn=>{
-  btn.addEventListener("click",()=>{
+modal.onclick=e=>{
+if(e.target===modal)
+modal.style.display="none";
+};
 
-    document
-    .querySelectorAll(".price-card")
-    .forEach(card=>card.classList.remove("selected"));
+/* LANGUAGE SWITCH */
 
-    btn.closest(".price-card")
-       .classList.add("selected");
+document.getElementById("langSwitch")
+.onclick=()=>{
+const title=document.querySelector(".hero-title");
 
-    alert("Plan selected! Our team will contact you.");
-  });
-});
+title.innerText=
+title.innerText.includes("Fastest")
+? "អ៊ីនធឺណិតលឿនបំផុតនៅកម្ពុជា"
+: "Fastest Fiber in Cambodia";
+};
 
+/* NEWSLETTER */
 
-/* ================= NEWSLETTER ================= */
+document.getElementById("subscribeBtn")
+.onclick=()=>{
+const email=document.getElementById("emailInput").value;
 
-const subscribeBtn =
-document.querySelector(".footer button");
+if(!email.includes("@"))
+return alert("Invalid email");
 
-if(subscribeBtn){
-subscribeBtn.addEventListener("click",()=>{
+alert("Subscribed!");
+};
 
-  const email =
-  document.querySelector(".footer input").value;
+/* BOOK INSTALL */
 
-  const valid =
-  /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  if(!valid.test(email)){
-    alert("Enter a valid email.");
-    return;
-  }
-
-  alert("🎉 Subscribed successfully!");
-});
-}
-
-
-/* ================= NAVBAR SCROLL EFFECT ================= */
-
-window.addEventListener("scroll",()=>{
-  const nav=document.querySelector(".navbar");
-
-  if(window.scrollY>50){
-    nav.style.boxShadow="0 8px 25px rgba(0,0,0,.15)";
-  }else{
-    nav.style.boxShadow="0 2px 10px rgba(0,0,0,.05)";
-  }
-});
+document.getElementById("bookInstall")
+.onclick=()=>{
+alert("Installation scheduled!");
+};
