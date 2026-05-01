@@ -4,163 +4,173 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Bee Union Cambodia | Fiber Internet</title>
-
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<!-- FontAwesome -->
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<title>Bee Union Cambodia</title>
 
 <link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<script src="https://kit.fontawesome.com/4adad1b7b3.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
 
-<!-- ================= NAVBAR ================= -->
-<header class="navbar">
-  <div class="container nav-content">
-      <h2 class="logo">🐝 Bee Union Cambodia</h2>
+<!-- NAVBAR -->
+<nav class="navbar">
+<div class="container nav-content">
 
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Residential</a></li>
-          <li><a href="#">Business</a></li>
-          <li><a href="#">Support</a></li>
-        </ul>
-      </nav>
+<h2 class="logo">🐝 Bee Union</h2>
 
-      <button class="cta-btn">Pay Bill</button>
-  </div>
-</header>
+<ul class="nav-links">
+<li><a href="#home">Home</a></li>
+<li><a href="#pricing">Residential</a></li>
+<li><a href="#speedtest">Speed Test</a></li>
+<li><a href="#support">Support</a></li>
+</ul>
 
-<!-- ================= HERO ================= -->
-<section class="hero">
+<div>
+<button id="langSwitch">KH</button>
+<button id="payBill" class="cta-btn">Pay Bill</button>
+</div>
+
+</div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero">
+<div class="fiber-bg"></div>
+
 <div class="container hero-grid">
 
-  <div class="hero-text">
-    <h1 class="hero-title">Fastest Fiber in Cambodia</h1>
-    <p class="hero-sub">
-      Ultra-reliable fiber internet built for gaming, streaming, and business performance.
-    </p>
+<div>
+<h1 class="hero-title">Fastest Fiber in Cambodia</h1>
+<p>Ultra-reliable fiber internet for homes & businesses.</p>
 
-    <div class="coverage-box">
-        <input type="text" placeholder="Enter your address">
-        <button>Check Coverage</button>
-    </div>
-  </div>
+<div class="coverage-box">
+<input placeholder="Enter your address">
+<button id="checkCoverage">Check Coverage</button>
+</div>
+</div>
 
-  <div class="hero-visual">
-      <div class="glass-card">
-        <i class="fa-solid fa-wifi"></i>
-        <h3>1Gbps Ready Network</h3>
-      </div>
-  </div>
+<div class="glass-card">
+<i class="fas fa-wifi"></i>
+<h3>Up to 1Gbps Speed</h3>
+<p>No Data Caps • Low Latency</p>
+</div>
 
 </div>
 </section>
 
-<!-- ================= FEATURES ================= -->
+<!-- FEATURES -->
 <section class="features container">
+<div class="feature">
+<i class="fas fa-network-wired"></i>
+<h3>Fiber Optic</h3>
+</div>
 
-  <div class="feature">
-    <i class="fa-solid fa-network-wired"></i>
-    <h3>Fiber Optic</h3>
-    <p>Pure fiber connection for unmatched speed and stability.</p>
-  </div>
+<div class="feature">
+<i class="fas fa-headset"></i>
+<h3>24/7 Support</h3>
+</div>
 
-  <div class="feature">
-    <i class="fa-solid fa-headset"></i>
-    <h3>24/7 Support</h3>
-    <p>Local engineers ready anytime you need help.</p>
-  </div>
-
-  <div class="feature">
-    <i class="fa-solid fa-infinity"></i>
-    <h3>No Data Caps</h3>
-    <p>Unlimited browsing, streaming, and gaming.</p>
-  </div>
-
+<div class="feature">
+<i class="fas fa-infinity"></i>
+<h3>No Data Caps</h3>
+</div>
 </section>
 
-<!-- ================= PRICING ================= -->
-<section class="pricing">
-
+<!-- PRICING -->
+<section id="pricing" class="pricing">
 <div class="container pricing-grid">
 
-  <!-- Basic -->
-  <div class="price-card">
-    <h3>Basic</h3>
-    <h2>50 Mbps</h2>
-    <p class="price">$19/mo</p>
-    <ul>
-      <li>✔ Unlimited Data</li>
-      <li>✔ Free Installation</li>
-      <li>✔ Router Included</li>
-    </ul>
-    <button>Choose Plan</button>
-  </div>
+<div class="price-card">
+<h3>Basic</h3>
+<h2>$15/mo</h2>
+<p>50 Mbps</p>
+<button>Select</button>
+</div>
 
-  <!-- Home -->
-  <div class="price-card highlight">
-    <span class="badge">Best Value</span>
-    <h3>Home</h3>
-    <h2>200 Mbps</h2>
-    <p class="price">$39/mo</p>
-    <ul>
-      <li>✔ Ultra Low Latency</li>
-      <li>✔ Priority Support</li>
-      <li>✔ WiFi 6 Router</li>
-    </ul>
-    <button>Choose Plan</button>
-  </div>
+<div class="price-card highlight">
+<div class="badge">Best Value</div>
+<h3>Gamer</h3>
+<h2>$35/mo</h2>
+<p>300 Mbps</p>
+<button>Select</button>
+</div>
 
-  <!-- Business -->
-  <div class="price-card">
-    <h3>Business</h3>
-    <h2>1 Gbps</h2>
-    <p class="price">$99/mo</p>
-    <ul>
-      <li>✔ Static IP</li>
-      <li>✔ SLA Guarantee</li>
-      <li>✔ Dedicated Support</li>
-    </ul>
-    <button>Choose Plan</button>
-  </div>
+<div class="price-card">
+<h3>Business</h3>
+<h2>$79/mo</h2>
+<p>1 Gbps</p>
+<button>Select</button>
+</div>
 
 </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
-<footer class="footer">
+<!-- SPEED TEST -->
+<section id="speedtest" class="speedtest">
+<h2>Test Your Internet Speed</h2>
 
+<div class="speed-card">
+<h1 id="speedNumber">0</h1>
+<p>Mbps</p>
+<button id="startSpeed">Start Test</button>
+</div>
+</section>
+
+<!-- MAP -->
+<section class="coverage-map">
+<h2>Fiber Coverage Map</h2>
+
+<iframe src="https://maps.google.com/maps?q=Phnom%20Penh&z=12&output=embed"></iframe>
+</section>
+
+<!-- BOOKING -->
+<section class="booking">
+<h2>Schedule Installation</h2>
+<input type="date">
+<input type="time">
+<button id="bookInstall">Book Installation</button>
+</section>
+
+<!-- FOOTER -->
+<footer id="support" class="footer">
 <div class="container footer-grid">
 
-  <div>
-    <h3>Bee Union Cambodia</h3>
-    <p>Next-generation fiber internet provider.</p>
-  </div>
-
-  <div>
-    <h4>Newsletter</h4>
-    <input type="email" placeholder="Your email">
-    <button>Subscribe</button>
-  </div>
-
-  <div>
-    <h4>Contact</h4>
-    <p>support@beeunion.com</p>
-    <div class="socials">
-      <i class="fab fa-facebook"></i>
-      <i class="fab fa-telegram"></i>
-      <i class="fab fa-youtube"></i>
-    </div>
-  </div>
-
+<div>
+<h4>Bee Union Cambodia</h4>
+<p>Fast. Reliable. Future Ready.</p>
 </div>
 
+<div>
+<h4>Newsletter</h4>
+<input id="emailInput" placeholder="Email address">
+<button id="subscribeBtn">Subscribe</button>
+</div>
+
+<div>
+<h4>Contact</h4>
+<p>support@beeunion.com</p>
+<div class="socials">
+<i class="fab fa-facebook"></i>
+<i class="fab fa-telegram"></i>
+</div>
+</div>
+
+</div>
 </footer>
+
+<!-- PAY BILL MODAL -->
+<div id="billModal" class="modal">
+<div class="modal-box">
+<h3>Pay Your Bill</h3>
+<input placeholder="Customer ID">
+<input placeholder="Amount USD">
+<button>Pay Now</button>
+</div>
+</div>
+
 <script src="script.js"></script>
 </body>
 </html>
