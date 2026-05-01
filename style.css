@@ -1,7 +1,3 @@
-/* =========================================
-   GLOBAL RESET
-========================================= */
-
 *{
 margin:0;
 padding:0;
@@ -9,18 +5,7 @@ box-sizing:border-box;
 font-family:'Inter',sans-serif;
 }
 
-html{
-scroll-behavior:smooth;
-}
-
-body{
-background:#ffffff;
-color:#212121;
-line-height:1.6;
-overflow-x:hidden;
-}
-
-/* Container */
+body{color:#212121;}
 
 .container{
 width:90%;
@@ -28,18 +13,14 @@ max-width:1200px;
 margin:auto;
 }
 
-/* =========================================
-   NAVBAR
-========================================= */
-
+/* NAVBAR */
 .navbar{
 position:sticky;
 top:0;
 background:white;
-z-index:1000;
-padding:15px 0;
-transition:0.3s;
-box-shadow:0 2px 10px rgba(0,0,0,0.05);
+padding:15px;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
+z-index:999;
 }
 
 .nav-content{
@@ -48,129 +29,90 @@ justify-content:space-between;
 align-items:center;
 }
 
-.logo{
-color:#FFC107;
-font-weight:700;
-letter-spacing:.5px;
-}
-
-/* Navigation */
-
 .nav-links{
 display:flex;
+gap:25px;
 list-style:none;
-gap:30px;
 }
 
 .nav-links a{
 text-decoration:none;
 color:#212121;
-font-weight:500;
-transition:.3s;
 }
-
-.nav-links a:hover{
-color:#FFC107;
-}
-
-/* CTA */
 
 .cta-btn{
 background:#FFC107;
 border:none;
-padding:10px 20px;
+padding:10px 18px;
 border-radius:10px;
-font-weight:600;
 cursor:pointer;
-transition:.3s;
 }
 
-.cta-btn:hover{
-transform:translateY(-2px);
-box-shadow:0 6px 15px rgba(0,0,0,.15);
-}
-
-/* =========================================
-   HERO SECTION
-========================================= */
+/* HERO */
 
 .hero{
 padding:90px 0;
-background:
-linear-gradient(135deg,#ffffff,#f7f7f7);
+position:relative;
+overflow:hidden;
+background:#f7f7f7;
 }
 
 .hero-grid{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:50px;
 align-items:center;
+gap:40px;
 }
 
 .hero-title{
-font-size:52px;
+font-size:48px;
 font-weight:700;
-animation:fadeUp 1s ease forwards;
 }
-
-.hero-sub{
-margin:20px 0;
-color:#555;
-font-size:18px;
-}
-
-/* Coverage checker */
 
 .coverage-box{
+margin-top:20px;
 display:flex;
 gap:10px;
-margin-top:15px;
 }
 
 .coverage-box input{
+padding:14px;
 flex:1;
-padding:15px;
 border-radius:10px;
 border:1px solid #ddd;
-font-size:16px;
-outline:none;
 }
 
 .coverage-box button{
 background:#FFC107;
 border:none;
-padding:15px 20px;
+padding:14px 20px;
 border-radius:10px;
-font-weight:600;
 cursor:pointer;
-transition:.3s;
 }
-
-.coverage-box button:hover{
-transform:translateY(-2px);
-}
-
-/* Glass Card */
 
 .glass-card{
-background:rgba(255,255,255,0.65);
-backdrop-filter:blur(12px);
-border-radius:12px;
+background:rgba(255,255,255,.6);
+backdrop-filter:blur(10px);
 padding:40px;
+border-radius:12px;
 text-align:center;
-box-shadow:0 10px 30px rgba(0,0,0,0.1);
-animation:float 4s ease-in-out infinite;
+box-shadow:0 10px 30px rgba(0,0,0,.1);
 }
 
-.glass-card i{
-font-size:45px;
-color:#FFC107;
-margin-bottom:15px;
+.fiber-bg{
+position:absolute;
+width:100%;
+height:100%;
+background:linear-gradient(120deg,transparent,rgba(255,193,7,.2),transparent);
+animation:fiberMove 6s linear infinite;
 }
 
-/* =========================================
-   FEATURES
-========================================= */
+@keyframes fiberMove{
+0%{transform:translateX(-100%)}
+100%{transform:translateX(100%)}
+}
+
+/* FEATURES */
 
 .features{
 display:grid;
@@ -180,31 +122,17 @@ padding:80px 0;
 text-align:center;
 }
 
-.feature{
-padding:30px;
-border-radius:12px;
-transition:.3s;
-}
-
 .feature i{
-font-size:34px;
+font-size:30px;
 color:#FFC107;
-margin-bottom:15px;
 }
 
-.feature:hover{
-transform:translateY(-8px);
-box-shadow:0 12px 25px rgba(0,0,0,0.08);
-}
-
-/* =========================================
-   PRICING
-========================================= */
+/* PRICING */
 
 .pricing{
 background:#212121;
-padding:90px 0;
 color:white;
+padding:80px 0;
 }
 
 .pricing-grid{
@@ -215,82 +143,80 @@ gap:30px;
 
 .price-card{
 background:white;
-color:#212121;
-padding:45px 35px;
+color:black;
+padding:40px;
 border-radius:12px;
 text-align:center;
-transition:.35s;
-position:relative;
+transition:.3s;
 }
 
 .price-card:hover{
 transform:translateY(-10px);
-box-shadow:0 15px 35px rgba(0,0,0,.25);
 }
-
-.price-card h2{
-margin:10px 0;
-}
-
-.price{
-font-size:30px;
-font-weight:700;
-color:#FFC107;
-margin:15px 0;
-}
-
-.price-card ul{
-list-style:none;
-margin:25px 0;
-}
-
-.price-card li{
-margin:10px 0;
-}
-
-.price-card button{
-background:#FFC107;
-border:none;
-padding:12px 22px;
-border-radius:10px;
-cursor:pointer;
-font-weight:600;
-transition:.3s;
-}
-
-.price-card button:hover{
-transform:translateY(-2px);
-}
-
-/* Highlight plan */
 
 .highlight{
-transform:scale(1.06);
-box-shadow:0 10px 35px rgba(0,0,0,.3);
+transform:scale(1.05);
 }
 
 .badge{
-position:absolute;
-top:-12px;
-left:50%;
-transform:translateX(-50%);
 background:#FFC107;
-padding:6px 14px;
+padding:5px 12px;
 border-radius:8px;
-font-size:12px;
-font-weight:600;
+margin-bottom:10px;
+display:inline-block;
 }
 
-/* Selected plan (JS adds class) */
+/* SPEED TEST */
 
-.price-card.selected{
-outline:3px solid #FFC107;
-transform:scale(1.07);
+.speedtest{
+padding:80px;
+text-align:center;
 }
 
-/* =========================================
-   FOOTER
-========================================= */
+.speed-card{
+background:white;
+padding:40px;
+border-radius:12px;
+display:inline-block;
+box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+
+#speedNumber{
+font-size:60px;
+color:#FFC107;
+}
+
+/* MAP */
+
+.coverage-map{
+text-align:center;
+padding:80px 0;
+}
+
+.coverage-map iframe{
+width:90%;
+height:400px;
+border-radius:12px;
+border:none;
+}
+
+/* BOOKING */
+
+.booking{
+background:#212121;
+color:white;
+padding:80px;
+text-align:center;
+}
+
+.booking input{
+padding:10px;
+margin:10px;
+border-radius:8px;
+border:none;
+}
+
+/* FOOTER */
 
 .footer{
 background:#111;
@@ -301,118 +227,45 @@ padding:60px 0;
 .footer-grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:40px;
-}
-
-.footer h4{
-margin-bottom:10px;
+gap:30px;
 }
 
 .footer input{
+padding:10px;
+margin-top:10px;
 width:100%;
-padding:12px;
-border-radius:8px;
-border:none;
-margin-top:10px;
 }
 
-.footer button{
-margin-top:10px;
-padding:10px 18px;
-background:#FFC107;
-border:none;
-border-radius:8px;
-cursor:pointer;
-}
+/* MODAL */
 
-.socials i{
-font-size:20px;
-margin-right:12px;
-cursor:pointer;
-transition:.3s;
-}
-
-.socials i:hover{
-color:#FFC107;
-}
-
-/* =========================================
-   MOBILE MENU
-========================================= */
-
-.menu-toggle{
+.modal{
 display:none;
-background:none;
-border:none;
-font-size:24px;
-cursor:pointer;
-}
-
-.nav-links.show{
-display:flex;
-flex-direction:column;
-position:absolute;
-top:70px;
+position:fixed;
+top:0;
 left:0;
 width:100%;
+height:100%;
+background:rgba(0,0,0,.6);
+justify-content:center;
+align-items:center;
+}
+
+.modal-box{
 background:white;
-padding:20px;
-box-shadow:0 10px 25px rgba(0,0,0,.1);
+padding:40px;
+border-radius:12px;
+display:flex;
+flex-direction:column;
+gap:10px;
 }
 
-/* =========================================
-   ANIMATIONS
-========================================= */
+/* RESPONSIVE */
 
-@keyframes fadeUp{
-from{
-opacity:0;
-transform:translateY(40px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-
-@keyframes float{
-0%,100%{transform:translateY(0);}
-50%{transform:translateY(-15px);}
-}
-
-/* =========================================
-   RESPONSIVE DESIGN
-========================================= */
-
-@media(max-width:1000px){
-
-.hero-grid{
-grid-template-columns:1fr;
-text-align:center;
-}
-
-.hero-title{
-font-size:38px;
-}
-
-.features{
-grid-template-columns:1fr;
-}
-
-.pricing-grid{
-grid-template-columns:1fr;
-}
-
+@media(max-width:900px){
+.hero-grid,
+.pricing-grid,
+.features,
 .footer-grid{
 grid-template-columns:1fr;
 }
-
-.nav-links{
-display:none;
-}
-
-.menu-toggle{
-display:block;
-}
-
 }
